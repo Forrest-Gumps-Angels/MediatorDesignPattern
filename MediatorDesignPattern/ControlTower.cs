@@ -6,5 +6,6 @@ namespace MediatorDesignPattern
 {
     class ControlTower
     {
+
     }
 }
