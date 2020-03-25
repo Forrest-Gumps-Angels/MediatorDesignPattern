@@ -6,7 +6,7 @@ namespace MediatorDesignPattern
 {
     public class BaggageHandlers : GroundPersonnel
     {
-        BaggageHandlers(int id)
+        public BaggageHandlers(int id)
         {
             EmployeeID = id;
         }

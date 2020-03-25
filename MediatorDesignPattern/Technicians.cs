@@ -6,7 +6,7 @@ namespace MediatorDesignPattern
 {
     class Technicians : GroundPersonnel
     {
-        Technicians(int id)
+        public Technicians(int id)
         {
             EmployeeID = id;
         }
