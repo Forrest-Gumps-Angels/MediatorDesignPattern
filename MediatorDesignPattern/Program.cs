@@ -6,6 +6,12 @@ namespace MediatorDesignPattern
     {
         static void Main(string[] args)
         {
+            Helicopter Choppa = new Helicopter();
+
+            Choppa.RequestLanding();
+
+
+
             Console.WriteLine("Hello World!");
         }
     }

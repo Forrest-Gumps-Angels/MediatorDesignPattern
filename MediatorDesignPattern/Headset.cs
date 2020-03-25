@@ -8,7 +8,7 @@ namespace MediatorDesignPattern
     {
         public void receive()
         {
-
+            Console.WriteLine("Received request on Headset");
         }
     }
 }
