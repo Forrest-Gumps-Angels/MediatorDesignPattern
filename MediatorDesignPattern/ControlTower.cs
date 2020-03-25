@@ -30,7 +30,6 @@ namespace MediatorDesignPattern
                 foreach (var personel in GroundPersonnel)
                 {
                     personel.ReceiveLandingRequest();
-                    //Console.WriteLine("Personel with ID {0} has received landing request", personel.ID);
                     HandleRequestLanding(sender);
                 }
             }
@@ -40,7 +39,6 @@ namespace MediatorDesignPattern
                 foreach (var personel in GroundPersonnel)
                 {
                     personel.ReceiveTakeoffRequest();
-                    //Console.WriteLine("Personel with ID {0} has received take off request", personel.ID);
                     HandleRequestTakeoff(sender);
                 }
             }
