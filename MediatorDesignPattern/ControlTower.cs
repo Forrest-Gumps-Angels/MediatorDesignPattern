@@ -6,14 +6,14 @@ namespace MediatorDesignPattern
 {
     public class ControlTower : IControlTower
     {
-        private List<GroundPersonnel> GroundPersonnel;
+        private List<GroundPersonnel> GroundPersonnel = new List<GroundPersonnel>();
 
         public ControlTower()
         {
             //Army of GroundPersonnel
-            GroundPersonnel.Add(new Technicians());
-            GroundPersonnel.Add(new Technicians());
-            GroundPersonnel.Add(new Technicians());
+            GroundPersonnel.Add(new Technicians()); 
+            GroundPersonnel.Add(new Technicians()); 
+            GroundPersonnel.Add(new Technicians()); 
             GroundPersonnel.Add(new Technicians());
             GroundPersonnel.Add(new Technicians());
             GroundPersonnel.Add(new BaggageHandlers());
@@ -31,6 +31,7 @@ namespace MediatorDesignPattern
                 {
                     personel.ReceiveLandingRequest();
                     //Console.WriteLine("Personel with ID {0} has received landing request", personel.ID);
+                    HandleRequestLanding();
                 }
             }
 
@@ -40,6 +41,7 @@ namespace MediatorDesignPattern
                 {
                     personel.ReceiveTakeoffRequest();
                     //Console.WriteLine("Personel with ID {0} has received take off request", personel.ID);
+                    HandleRequestTakeoff();
                 }
             }
         }
