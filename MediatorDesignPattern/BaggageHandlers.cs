@@ -4,8 +4,12 @@ using System.Text;
 
 namespace MediatorDesignPattern
 {
-    class BaggageHandlers : GroundPersonnel
+    public class BaggageHandlers : GroundPersonnel
     {
+        public override void ReceiveLandingRequest()
+        { }
 
+        public override void ReceiveTakeoffRequest()
+        { }
     }
 }

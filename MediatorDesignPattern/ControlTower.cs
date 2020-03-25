@@ -4,8 +4,19 @@ using System.Text;
 
 namespace MediatorDesignPattern
 {
-    class ControlTower
+    public class ControlTower
     {
+        private List<IAircraft> TakeoffQueue;
+        private List<IAircraft> LandingQueue;
+        private List<IAircraft> Aircrafts;
+        private List<GroundPersonnel> GroundPersonnel;
+
+        public void Notify()
+        { }
+
+        public void HandleRequest()
+        { }
+
 
     }
 }

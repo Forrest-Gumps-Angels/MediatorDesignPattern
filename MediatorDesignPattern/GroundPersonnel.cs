@@ -6,5 +6,11 @@ namespace MediatorDesignPattern
 {
     public abstract class GroundPersonnel
     {
+        public void ReceiveCommunication()
+        { }
+
+        public abstract void ReceiveLandingRequest();
+
+        public abstract void ReceiveTakeoffRequest();
     }
 }
