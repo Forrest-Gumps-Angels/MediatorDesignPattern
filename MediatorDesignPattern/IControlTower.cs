@@ -4,9 +4,8 @@ using System.Text;
 
 namespace MediatorDesignPattern
 {
-    public enum RequestType
+    public interface IControlTower
     {
-        TakeOff,
-        Landing
+        void Notify(IAircraft sender, RequestType id);
     }
 }

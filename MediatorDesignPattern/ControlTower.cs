@@ -4,23 +4,55 @@ using System.Text;
 
 namespace MediatorDesignPattern
 {
-    public class ControlTower
+    public class ControlTower : IControlTower
     {
-        private Queue<IAircraft> TakeoffQueue;
-        private Queue<IAircraft> LandingQueue;
         private List<GroundPersonnel> GroundPersonnel;
 
-        public void NotifyTakeoff()
-        { }
+        public ControlTower()
+        {
+            //Army of GroundPersonnel
+            GroundPersonnel.Add(new Technicians());
+            GroundPersonnel.Add(new Technicians());
+            GroundPersonnel.Add(new Technicians());
+            GroundPersonnel.Add(new Technicians());
+            GroundPersonnel.Add(new Technicians());
+            GroundPersonnel.Add(new BaggageHandlers());
+            GroundPersonnel.Add(new BaggageHandlers());
+            GroundPersonnel.Add(new BaggageHandlers());
+            GroundPersonnel.Add(new BaggageHandlers());
+            GroundPersonnel.Add(new BaggageHandlers());
+        }
 
-        public void NotifyLanding()
-        { }
+        public void Notify(IAircraft sender, RequestType id)
+        {
+            if (id == RequestType.Landing)
+            {
+                foreach (var personel in GroundPersonnel)
+                {
+                    personel.ReceiveLandingRequest();
+                    //Console.WriteLine("Personel with ID {0} has received landing request", personel.ID);
+                }
+            }
 
-        public void HandleRequestLanding()
-        { }
+            else if (id == RequestType.TakeOff)
+            {
+                foreach (var personel in GroundPersonnel)
+                {
+                    personel.ReceiveTakeoffRequest();
+                    //Console.WriteLine("Personel with ID {0} has received take off request", personel.ID);
+                }
+            }
+        }
 
-        public void HandleRequestTakeoff()
-        { }
+        private void HandleRequestLanding()
+        {
+            
+        }
+
+        private void HandleRequestTakeoff()
+        {
+            
+        }
 
     }
 }

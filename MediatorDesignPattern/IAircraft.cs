@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MediatorDesignPattern
 {
-    interface IAircraft
+    public interface IAircraft
     {
         void TakeoffGranted();
         void LandingGranted();
