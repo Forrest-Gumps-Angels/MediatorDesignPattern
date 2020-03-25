@@ -1,4 +1,8 @@
-﻿using System;
+﻿// ------------------------------------------------------------------------------------- //
+// Partly borrowed from https://refactoring.guru/design-patterns/mediator/csharp/example //
+// ------------------------------------------------------------------------------------- //
+
+using System;
 
 namespace MediatorDesignPattern2
 {
