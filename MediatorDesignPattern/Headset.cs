@@ -4,11 +4,21 @@ using System.Text;
 
 namespace MediatorDesignPattern
 {
-    class Headset : ICommunication
+    public class Headset : ICommunication
     {
-        public void receive()
+        public void receive(GroundPersonnel sender, RequestType id)
         {
             Console.WriteLine("Received request on Headset");
+
+            switch(id)
+            {
+                case RequestType.Landing:
+                    sender.ReceiveLandingRequest();
+                    break;
+                case RequestType.TakeOff:
+                    sender.ReceiveTakeoffRequest();
+                    break;
+            }
         }
     }
 }

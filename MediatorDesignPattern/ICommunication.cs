@@ -4,8 +4,8 @@ using System.Text;
 
 namespace MediatorDesignPattern
 {
-    interface ICommunication
+    public interface ICommunication
     {
-        void receive();
+        void receive(GroundPersonnel sender, RequestType id);
     }
 }

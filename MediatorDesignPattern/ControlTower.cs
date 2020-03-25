@@ -10,17 +10,12 @@ namespace MediatorDesignPattern
 
         public ControlTower()
         {
-            //Army of GroundPersonnel
-            GroundPersonnel.Add(new Technicians());     //Mark
-            GroundPersonnel.Add(new Technicians());     //Cindy
-            GroundPersonnel.Add(new Technicians());     //Crystal
-            GroundPersonnel.Add(new Technicians());     //Dick
-            GroundPersonnel.Add(new Technicians());     //Sean
-            GroundPersonnel.Add(new BaggageHandlers()); //Ken
-            GroundPersonnel.Add(new BaggageHandlers()); //Natasha
-            GroundPersonnel.Add(new BaggageHandlers()); //Adriana
-            GroundPersonnel.Add(new BaggageHandlers()); //Brandi
-            GroundPersonnel.Add(new BaggageHandlers()); //Alex
+
+            for (int i = 0; i <= 5; i += 2)
+            {
+                GroundPersonnel.Add(new Technicians(i));
+                GroundPersonnel.Add(new BaggageHandlers(i+1));
+            }
         }
 
         public void Notify(IAircraft sender, RequestType id)
@@ -29,18 +24,18 @@ namespace MediatorDesignPattern
             {
                 foreach (var personel in GroundPersonnel)
                 {
-                    personel.ReceiveLandingRequest();
-                    HandleRequestLanding(sender);
+                    personel.commDevice.receive(personel,id);
                 }
+                HandleRequestLanding(sender);
             }
 
             else if (id == RequestType.TakeOff)
             {
                 foreach (var personel in GroundPersonnel)
                 {
-                    personel.ReceiveTakeoffRequest();
-                    HandleRequestTakeoff(sender);
+                    personel.commDevice.receive(personel, id);
                 }
+                HandleRequestTakeoff(sender);
             }
         }
 

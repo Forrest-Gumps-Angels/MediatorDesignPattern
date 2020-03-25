@@ -7,9 +7,9 @@ namespace MediatorDesignPattern
     public abstract class GroundPersonnel
     {
         protected int EmployeeID;
+        public ICommunication commDevice;
 
-        public void ReceiveCommunication()
-        { }
+        public abstract void ReceiveCommunication(RequestType id);
 
         public abstract void ReceiveLandingRequest();
 
