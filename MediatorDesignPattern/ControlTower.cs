@@ -11,16 +11,16 @@ namespace MediatorDesignPattern
         public ControlTower()
         {
             //Army of GroundPersonnel
-            GroundPersonnel.Add(new Technicians()); 
-            GroundPersonnel.Add(new Technicians()); 
-            GroundPersonnel.Add(new Technicians()); 
-            GroundPersonnel.Add(new Technicians());
-            GroundPersonnel.Add(new Technicians());
-            GroundPersonnel.Add(new BaggageHandlers());
-            GroundPersonnel.Add(new BaggageHandlers());
-            GroundPersonnel.Add(new BaggageHandlers());
-            GroundPersonnel.Add(new BaggageHandlers());
-            GroundPersonnel.Add(new BaggageHandlers());
+            GroundPersonnel.Add(new Technicians());     //Mark
+            GroundPersonnel.Add(new Technicians());     //Cindy
+            GroundPersonnel.Add(new Technicians());     //Crystal
+            GroundPersonnel.Add(new Technicians());     //Dick
+            GroundPersonnel.Add(new Technicians());     //Sean
+            GroundPersonnel.Add(new BaggageHandlers()); //Ken
+            GroundPersonnel.Add(new BaggageHandlers()); //Natasha
+            GroundPersonnel.Add(new BaggageHandlers()); //Adriana
+            GroundPersonnel.Add(new BaggageHandlers()); //Brandi
+            GroundPersonnel.Add(new BaggageHandlers()); //Alex
         }
 
         public void Notify(IAircraft sender, RequestType id)
@@ -31,7 +31,7 @@ namespace MediatorDesignPattern
                 {
                     personel.ReceiveLandingRequest();
                     //Console.WriteLine("Personel with ID {0} has received landing request", personel.ID);
-                    HandleRequestLanding();
+                    HandleRequestLanding(sender);
                 }
             }
 
@@ -41,19 +41,21 @@ namespace MediatorDesignPattern
                 {
                     personel.ReceiveTakeoffRequest();
                     //Console.WriteLine("Personel with ID {0} has received take off request", personel.ID);
-                    HandleRequestTakeoff();
+                    HandleRequestTakeoff(sender);
                 }
             }
         }
 
-        private void HandleRequestLanding()
+        private void HandleRequestLanding(IAircraft sender)
         {
-            
+            sender.LandingGranted();
+            Console.WriteLine("Landing granted for {0}", sender);
         }
 
-        private void HandleRequestTakeoff()
+        private void HandleRequestTakeoff(IAircraft sender)
         {
-            
+            sender.TakeoffGranted();
+            Console.WriteLine("Take off granted for {0}", sender);
         }
 
     }
