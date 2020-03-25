@@ -10,14 +10,14 @@ namespace MediatorDesignPattern
 
         public void TakeoffGranted()
         {
-            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.BackgroundColor = ConsoleColor.Red;
             Console.WriteLine("Airplane: Takeoff has been granted!");
             Console.ResetColor();
         }
 
         public void LandingGranted()
         {
-            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.BackgroundColor = ConsoleColor.Red;
             Console.WriteLine("Airplane: Landing has been granted!");
             Console.ResetColor();
         }
