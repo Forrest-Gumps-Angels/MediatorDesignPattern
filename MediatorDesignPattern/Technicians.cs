@@ -6,6 +6,11 @@ namespace MediatorDesignPattern
 {
     class Technicians : GroundPersonnel
     {
+        Technicians(int id)
+        {
+            EmployeeID = id;
+        }
+
         public override void ReceiveLandingRequest()
         {
             Console.WriteLine("Technicians receives landing request and prepares for airplane");
