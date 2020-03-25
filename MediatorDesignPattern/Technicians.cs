@@ -6,5 +6,9 @@ namespace MediatorDesignPattern
 {
     class Technicians : GroundPersonnel
     {
+        public override void ReceiveLandingRequest()
+        { }
+        public override void ReceiveTakeoffRequest()
+        { }
     }
 }

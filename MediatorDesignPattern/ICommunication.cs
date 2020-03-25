@@ -6,5 +6,6 @@ namespace MediatorDesignPattern
 {
     interface ICommunication
     {
+        void receive();
     }
 }

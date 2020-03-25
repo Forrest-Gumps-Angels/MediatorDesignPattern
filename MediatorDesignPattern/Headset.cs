@@ -6,5 +6,9 @@ namespace MediatorDesignPattern
 {
     class Headset : ICommunication
     {
+        public void receive()
+        {
+
+        }
     }
 }

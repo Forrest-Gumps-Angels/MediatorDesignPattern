@@ -6,5 +6,11 @@ namespace MediatorDesignPattern
 {
     interface IAircraft
     {
+        void TakeoffGranted();
+        void LandingGranted();
+        void RequestLanding();
+        void RequestTakeoff();
+
+
     }
 }
