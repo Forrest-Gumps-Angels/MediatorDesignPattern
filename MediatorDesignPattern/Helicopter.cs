@@ -12,9 +12,9 @@ namespace MediatorDesignPattern
         public void LandingGranted()
         { }
 
-        void RequestLanding()
+        public void RequestLanding()
         { }
-        void RequestTakeoff()
+        public void RequestTakeoff()
         { }
     }
 }
