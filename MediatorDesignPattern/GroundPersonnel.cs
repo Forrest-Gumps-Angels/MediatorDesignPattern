@@ -6,7 +6,7 @@ namespace MediatorDesignPattern
 {
     public abstract class GroundPersonnel
     {
-        private int EmployeeID;
+        protected int EmployeeID;
 
         public void ReceiveCommunication()
         { }
