@@ -13,12 +13,12 @@ namespace MediatorDesignPattern
 
         public override void ReceiveLandingRequest()
         {
-            Console.WriteLine("BagageHandlers receives landing request and pack airplane bagage");
+            Console.WriteLine("BagageHandler with ID {0} has received landing request", EmployeeID);
         }
 
         public override void ReceiveTakeoffRequest()
         {
-            Console.WriteLine("BagageHandlers receives takeoff request and prepares to unpack airplane bagage");
+            Console.WriteLine("BagageHandler with ID {0} has received take off request", EmployeeID);
         }
     }
 }

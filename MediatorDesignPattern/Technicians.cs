@@ -13,12 +13,12 @@ namespace MediatorDesignPattern
 
         public override void ReceiveLandingRequest()
         {
-            Console.WriteLine("Technicians receives landing request and prepares for airplane");
+            Console.WriteLine("Technician with ID {0} has received take off request", EmployeeID);
         }
 
         public override void ReceiveTakeoffRequest()
         {
-            Console.WriteLine("Technicians receives takeoff request and prepares airplane for takeoff");
+            Console.WriteLine("Technician with ID {0} has received take off request", EmployeeID);
         }
     }
 }
