@@ -24,11 +24,11 @@ namespace MediatorDesignPattern
 
         public void RequestLanding()
         {
-            controlTower_.notify(this, RequestType.Landing);
+            controlTower_.Notify(this, RequestType.Landing);
         }
         public void RequestTakeoff()
         {
-            controlTower_.notify(this, RequestType.TakeOff);
+            controlTower_.Notify(this, RequestType.TakeOff);
         }
 
         public Airplane(ControlTower tower)

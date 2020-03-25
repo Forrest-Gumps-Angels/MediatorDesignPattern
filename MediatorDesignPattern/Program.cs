@@ -10,28 +10,28 @@ namespace MediatorDesignPattern
             Helicopter Choppa = new Helicopter(MainControlTower);
             Airplane plane = new Airplane(MainControlTower);
 
-            Console.WriteLine("\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"");
-            Console.WriteLine("\tTest1: Helicopter requesting takeoff");
-            Console.WriteLine("\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\n");
+            Console.WriteLine("\n------------------------------------------------------------------");
+            Console.WriteLine("Test 1: Helicopter requesting takeoff");
+            Console.WriteLine("------------------------------------------------------------------");
 
             Choppa.RequestTakeoff();
 
-            Console.WriteLine("\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"");
-            Console.WriteLine("\tTest2: Helicopter requesting landing");
-            Console.WriteLine("\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\n");
+            Console.WriteLine("\n------------------------------------------------------------------");
+            Console.WriteLine("Test 2: Helicopter requesting landing");
+            Console.WriteLine("------------------------------------------------------------------");
 
             Choppa.RequestLanding();
 
 
-            Console.WriteLine("\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"");
-            Console.WriteLine("\tTest3: Airplane requesting takeoff");
-            Console.WriteLine("\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\n");
+            Console.WriteLine("\n------------------------------------------------------------------");
+            Console.WriteLine("Test 3: Airplane requesting takeoff");
+            Console.WriteLine("------------------------------------------------------------------");
 
             plane.RequestTakeoff();
 
-            Console.WriteLine("\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"");
-            Console.WriteLine("\tTest3: Airplane requesting landing");
-            Console.WriteLine("\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\n");
+            Console.WriteLine("\n------------------------------------------------------------------");
+            Console.WriteLine("Test 4: Airplane requesting landing");
+            Console.WriteLine("------------------------------------------------------------------");
 
 
             plane.RequestLanding();
