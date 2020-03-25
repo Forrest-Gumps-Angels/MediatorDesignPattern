@@ -4,11 +4,17 @@ using System.Text;
 
 namespace MediatorDesignPattern
 {
-    class Technicians : GroundPersonnel
+    public class Technicians : GroundPersonnel
     {
         public Technicians(int id)
         {
             EmployeeID = id;
+            commDevice = new Headset();
+        }
+
+        public override void ReceiveCommunication(RequestType id)
+        {
+            commDevice.receive(this, id);
         }
 
         public override void ReceiveLandingRequest()

@@ -11,7 +11,7 @@ namespace MediatorDesignPattern
         public ControlTower()
         {
 
-            for (int i = 0; i > 5; i += 2)
+            for (int i = 0; i <= 5; i += 2)
             {
                 GroundPersonnel.Add(new Technicians(i));
                 GroundPersonnel.Add(new BaggageHandlers(i+1));
@@ -24,18 +24,18 @@ namespace MediatorDesignPattern
             {
                 foreach (var personel in GroundPersonnel)
                 {
-                    personel.ReceiveLandingRequest();
-                    HandleRequestLanding(sender);
+                    personel.commDevice.receive(personel,id);
                 }
+                HandleRequestLanding(sender);
             }
 
             else if (id == RequestType.TakeOff)
             {
                 foreach (var personel in GroundPersonnel)
                 {
-                    personel.ReceiveTakeoffRequest();
-                    HandleRequestTakeoff(sender);
+                    personel.commDevice.receive(personel, id);
                 }
+                HandleRequestTakeoff(sender);
             }
         }
 
