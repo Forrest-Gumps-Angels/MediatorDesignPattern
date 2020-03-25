@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MediatorDesignPattern
 {
-    enum RequestType
+    public enum RequestType
     {
         TakeOff,
         Landing
