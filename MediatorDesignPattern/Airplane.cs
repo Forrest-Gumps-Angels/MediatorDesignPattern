@@ -7,6 +7,7 @@ namespace MediatorDesignPattern
     public class Airplane : IAircraft
     {
         private int ID;
+        private ControlTower controlTower_;
 
         public void TakeoffGranted()
         { }
@@ -14,13 +15,10 @@ namespace MediatorDesignPattern
         public void LandingGranted()
         { }
 
-        private void SendPosition()
+        public void RequestLanding()
         { }
 
-        private void RequestLanding()
-        { }
-
-        private void RequestTakeoff()
+        public void RequestTakeoff()
         { }
     }
 }

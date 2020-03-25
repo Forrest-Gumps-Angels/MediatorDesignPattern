@@ -6,17 +6,21 @@ namespace MediatorDesignPattern
 {
     public class ControlTower
     {
-        private List<IAircraft> TakeoffQueue;
-        private List<IAircraft> LandingQueue;
-        private List<IAircraft> Aircrafts;
+        private Queue<IAircraft> TakeoffQueue;
+        private Queue<IAircraft> LandingQueue;
         private List<GroundPersonnel> GroundPersonnel;
 
-        public void Notify()
+        public void NotifyTakeoff()
         { }
 
-        public void HandleRequest()
+        public void NotifyLanding()
         { }
 
+        public void HandleRequestLanding()
+        { }
+
+        public void HandleRequestTakeoff()
+        { }
 
     }
 }
