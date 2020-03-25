@@ -6,7 +6,8 @@ namespace MediatorDesignPattern
     {
         static void Main(string[] args)
         {
-            Helicopter Choppa = new Helicopter();
+            ControlTower MainControlTower = new ControlTower();
+            Helicopter Choppa = new Helicopter(MainControlTower);
 
             Choppa.RequestLanding();
 

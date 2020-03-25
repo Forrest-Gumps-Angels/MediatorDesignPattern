@@ -6,6 +6,8 @@ namespace MediatorDesignPattern
 {
     class Helicopter : IAircraft
     {
+        ControlTower controlTower_;
+
         public void TakeoffGranted()
         { }
 
@@ -16,5 +18,10 @@ namespace MediatorDesignPattern
         { }
         public void RequestTakeoff()
         { }
+
+        public Helicopter(ControlTower tower)
+        {
+            controlTower_ = tower;
+        }
     }
 }
