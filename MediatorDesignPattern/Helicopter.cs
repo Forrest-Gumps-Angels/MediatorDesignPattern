@@ -6,5 +6,15 @@ namespace MediatorDesignPattern
 {
     class Helicopter : IAircraft
     {
+        public void TakeoffGranted()
+        { }
+
+        public void LandingGranted()
+        { }
+
+        void RequestLanding()
+        { }
+        void RequestTakeoff()
+        { }
     }
 }

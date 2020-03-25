@@ -6,5 +6,9 @@ namespace MediatorDesignPattern
 {
     class WalkeyTalky : ICommunication
     {
+        public void receive()
+        {
+
+        }
     }
 }
